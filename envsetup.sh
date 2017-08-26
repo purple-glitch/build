@@ -581,9 +581,38 @@ function print_lunch_menu()
 {
     local uname=$(uname)
     echo
-    echo "You're building on" $uname
-    echo
-    echo "Lunch menu... pick a combo:"
+
+    echo ""
+    tput setaf 1;
+    tput bold;
+    echo "***********************************************"
+    echo "                                               "
+    echo "██╗  ██╗██████╗█████╗█╗   █╗████╗ █████╗████╗  "
+    echo "╚██╗██╔╝╚═██╔═╝█╔═══╝██╗  █║█╔══█╗█╔═══╝█╔══█╗ "
+    echo " ╚███╔╝   ██║  ████╗ █╔█╗ █║█║  █║████╗ █║  █║ "
+    echo " ██╔██╗   ██║  █╔══╝ █║╚█╗█║█║  █║█╔══╝ █║  █║ "
+    echo "██╔╝ ██╗  ██║  █████╗█║ ╚██║████╔╝█████╗████╔╝ "
+    echo "╚═╝  ╚═╝  ╚═╝  ╚════╝╚╝  ╚═╝╚═══╝ ╚════╝╚═══╝  "
+    echo "                                               "
+    echo "***********************************************"
+    echo "             Get Ready To Be Xtended           "
+    echo "***********************************************"
+    echo "         MSM Xtended ROM by Team-Xtended       "
+    echo "***********************************************"
+    tput sgr0;
+    echo ""
+    echo "           Welcome to the device menu          "
+    echo ""
+    tput bold;
+    echo "        Devices available for compiling        "
+    tput sgr0;
+    echo ""
+
+    if [ "z${XTENDED_DEVICES_ONLY}" != "z" ]; then
+       echo "Breakfast menu... pick a combo:"
+    else
+       echo "Lunch menu... pick a combo:"
+    fi
 
     local i=1
     local choice
@@ -1427,6 +1456,26 @@ function mka() {
             schedtool -B -n 1 -e ionice -n 1 make -j `cat /proc/cpuinfo | grep "^processor" | wc -l` "$@"
             ;;
     esac
+}
+
+function cmka() {
+    if [ ! -z "$1" ]; then
+        for i in "$@"; do
+            case $i in
+                bacon|xtended|otapackage|systemimage)
+                    mka installclean
+                    mka $i
+                    ;;
+                *)
+                    mka clean-$i
+                    mka $i
+                    ;;
+            esac
+        done
+    else
+        mka clean
+        mka
+    fi
 }
 
 # Print colored exit condition
