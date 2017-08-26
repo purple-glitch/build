@@ -979,21 +979,23 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
 
   system_progress = 0.75
 
-  script.Print("************************************************");
-  script.Print("************************************************");
-  script.Print("             Be Ready To Get Xtended            ");
-  script.Print("************************************************");
-  script.Print("                                                ");
-  script.Print("XX      XX                                      ");
-  script.Print(" XX    XX  TTTTT EEEE NN   N DDD   EEEEE DDD    ");
-  script.Print("  XX  XX     T   E    N N  N D  D  E     D   D  ");
-  script.Print("    XX       T   EEEE N  N N D   D EEEEE D    D ");
-  script.Print("  XX  XX     T   E    N   NN D  D  E     D   D  ");
-  script.Print(" XX    XX    T   EEEE N    N DDD   EEEEE DDD    ");
-  script.Print("XX      XX         CUSTOM ROM REDEFINED         ");
-  script.Print("************************************************");
-  script.Print("        MSM Xtended ROM by Team-Xtended         ");
-  script.Print("************************************************");
+  script.Print("*************************************************");
+  script.Print("             Get Ready To Be Xtended             ");
+  script.Print("*************************************************");
+  script.Print("X          X $$$  ###   $$   #### $$$$  ### $$$$$");
+  script.Print(" X        X  $  $ #  # $  $    #  $    #      $  ");
+  script.Print("  X      X   $$$  ###  $  $    #  $$$  #      $  ");
+  script.Print("   X    X    $    # #  $  $ #  #  $    #      $  ");
+  script.Print("    X  X     $    #  #  $$   ##   $$$$  ###   $  ");
+  script.Print("     XX      <------ CUSTOM ROM REDEFINED ------>");
+  script.Print("    X  X     $$$$$ #### $     $ ###   $$$$ ###   ");
+  script.Print("   X    X      $   #    $ $   $ #  #  $    #  #  ");
+  script.Print("  X      X     $   ###  $  $  $ #   # $$$  #   # ");
+  script.Print(" X        X    $   #    $   $ $ #  #  $    #  #  ");
+  script.Print("X          X   $   #### $     $ ###   $$$$ ###   ");
+  script.Print("*************************************************");
+  script.Print("        Project Xtended ROM by Team-Xtended      ");
+  script.Print("*************************************************");
 
   xtndversion = target_info.GetBuildProp("ro.xtended.display.version")
   androidver = target_info.GetBuildProp("ro.build.version.release")
