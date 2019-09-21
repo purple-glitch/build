@@ -39,6 +39,8 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.config.notification_sound=pixiedust.ogg \
 endif
 
+endif
+
 # The mainline checking whitelist, should be clean up
 PRODUCT_ARTIFACT_PATH_REQUIREMENT_WHITELIST += \
     system/app/messaging/messaging.apk \
