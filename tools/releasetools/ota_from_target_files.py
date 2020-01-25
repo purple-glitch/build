@@ -987,23 +987,23 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
 
   system_progress = 0.75
 
-  script.Print("*************************************************");
-  script.Print("             Get Ready To Be Xtended             ");
-  script.Print("*************************************************");
-  script.Print("X          X $$$  ###   $$   #### $$$$  ### $$$$$");
-  script.Print(" X        X  $  $ #  # $  $    #  $    #      $  ");
-  script.Print("  X      X   $$$  ###  $  $    #  $$$  #      $  ");
-  script.Print("   X    X    $    # #  $  $ #  #  $    #      $  ");
-  script.Print("    X  X     $    #  #  $$   ##   $$$$  ###   $  ");
-  script.Print("     XX      <------ CUSTOM ROM REDEFINED ------>");
-  script.Print("    X  X     $$$$$ #### $     $ ###   $$$$ ###   ");
-  script.Print("   X    X      $   #    $ $   $ #  #  $    #  #  ");
-  script.Print("  X      X     $   ###  $  $  $ #   # $$$  #   # ");
-  script.Print(" X        X    $   #    $   $ $ #  #  $    #  #  ");
-  script.Print("X          X   $   #### $     $ ###   $$$$ ###   ");
-  script.Print("*************************************************");
-  script.Print("        Project Xtended ROM by Team-Xtended      ");
-  script.Print("*************************************************");
+  script.Print("--------------------------------------------------");
+  script.Print("              Get Ready To Be Xtended             ");
+  script.Print("--------------------------------------------------");
+  script.Print("                 __  __ ___ __  __                ");
+  script.Print("                |  \/  / __|  \/  |               ");
+  script.Print("                | |\/| \__ \ |\/| |               ");
+  script.Print("                |_|  |_|___/_|  |_|               ");
+  script.Print("____  ___ __                     .___         .___");
+  script.Print("\   \/  //  |_  ____   ____    __| _/____   __| _/");
+  script.Print(" \     /\   __\/ __ \ /    \  / __ |/ __ \ / __ | "); 
+  script.Print(" /     \ |  | \  ___/|   |  \/ /_/ \  ___// /_/ | ");
+  script.Print("/___/\  \|__|  \___  >___|  /\____ |\___  >____ | ");
+  script.Print("      \_/          \/     \/      \/    \/     \/ ");
+  script.Print("                                                  ");
+  script.Print("--------------------------------------------------");
+  script.Print("               Custom ROM Redefined               ");
+  script.Print("--------------------------------------------------");
 
   xtndversion = target_info.GetBuildProp("ro.xtended.display.version")
   androidver = target_info.GetBuildProp("ro.build.version.release")
@@ -1014,7 +1014,6 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
   device = target_info.GetBuildProp("ro.product.name")
   manufacturer = target_info.GetBuildProp("ro.product.manufacturer")
 
-  script.Print("***********************************************");
   script.Print(" ROM version      : %s"%(xtndversion));
   script.Print("");
   script.Print(" Android version  : %s"%(androidver));
@@ -1028,7 +1027,7 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
   script.Print(" Device           : %s"%(device));
   script.Print("");
   script.Print(" Manufacturer     : %s"%(manufacturer));
-  script.Print("***********************************************");
+  script.Print("--------------------------------------------------");
 
   if OPTIONS.wipe_user_data:
     system_progress -= 0.1
