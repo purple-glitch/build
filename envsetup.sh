@@ -1503,10 +1503,10 @@ function cmka() {
 function repofastsync() {
     case `uname -s` in
         Darwin)
-            repo sync -c -f --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j8 "$@"
+            repo sync -c --optimized-fetch --no-tags --no-clone-bundle --prune -j8 "$@"
             ;;
         *)
-            schedtool -B -n 1 -e ionice -n 1 `which repo` sync -c -f --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j8 "$@"
+            schedtool -B -n 1 -e ionice -n 1 `which repo` sync -c --optimized-fetch --no-tags --no-clone-bundle --prune -j8 "$@"
             ;;
     esac
 }
