@@ -176,7 +176,7 @@ $(foreach namespace,$(SOONG_CONFIG_NAMESPACES),\
   $(call end_json_map))
 $(call end_json_map)
 
-include vendor/xtended/build/soong/soong_config.mk
+include vendor/ee/build/soong/soong_config.mk
 
 $(call json_end)
 
